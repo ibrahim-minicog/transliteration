@@ -58,8 +58,9 @@ def get_data(file_name='malayalam_map_unique.csv', min_frequency=1000, test_spli
     with  open(file_name, 'r', encoding='utf8') as f:
         for line in f:
             freq = int(f.readline().split(',')[3][1:-2])
-            if freq >= min_frequency:
-                lines.append(line)
+            lines.append(line)
+            if freq < min_frequency:
+                break
     lines.pop(0)
     print('Done.')
     print('Processing...')
