@@ -3,8 +3,7 @@ from data_utils import get_data, seq2seq_data_generator
 
 
 batch_size = 64
-epochs = 1
-
+epochs = 3
 
 train_data, test_data = get_data()
 
