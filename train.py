@@ -10,6 +10,7 @@ train_data, test_data = get_data()
 gen = seq2seq_data_generator(train_data, batch_size)
 
 model = get_model()
+model.load_weights('weights1.h5')
 
 model.fit_generator(gen, len(train_data[0]), epochs=epochs)
 
