@@ -1,3 +1,5 @@
+# Run this script once.
+
 import os
 import json
 
@@ -19,13 +21,15 @@ for line in lines:
     en_words.append(word_en)
     mal_words.append(word_mal)
 
-en_tokens = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+en_tokens = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+en_tokens = [ord(t) for t in en_tokens]
 mal_tokens = set()
 
 for word in mal_words:
     for c in word:
         mal_tokens.add(ord(c))
+    break
 
 mal_tokens = list(mal_tokens)
 
