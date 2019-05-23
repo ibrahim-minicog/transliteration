@@ -6,16 +6,16 @@ from keras.utils import Progbar
 import h5py
 
 
-with open('en_tokens.json', 'r') as f:
+with open('data/en_tokens.json', 'r') as f:
     en_tokens = json.load(f)
 
-with open('mal_tokens.json', 'r') as f:
+with open('data/mal_tokens.json', 'r') as f:
     mal_tokens = json.load(f)
 
-with open('en_maxlen.txt', 'r') as f:
+with open('data/en_maxlen.txt', 'r') as f:
     en_maxlen = int(f.read())
 
-with open('mal_maxlen.txt', 'r') as f:
+with open('data/mal_maxlen.txt', 'r') as f:
     mal_maxlen = int(f.read())
 
 
